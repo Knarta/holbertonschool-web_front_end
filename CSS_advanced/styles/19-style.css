@@ -21,7 +21,7 @@ html {
     --font-weight-bold: 700;
     --line-height-small: 1.2;
     --line-height-base: 1.5;
-    --line-height-big: 1.8;
+    --line-height-big: 1.6;
     --section-header-align: center;
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
@@ -38,7 +38,7 @@ html {
     --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--color-primary);
+    --nav-item-link-hover: var(var(--color-primary));
     --section-tagline-margin: 0;
 }
 
@@ -48,7 +48,7 @@ body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
-    line-height: var(--line-height-base);
+    min-height: var(--line-height-base);
 }
 
 a {
