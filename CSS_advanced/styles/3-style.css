@@ -1,4 +1,4 @@
-root{
+:root{
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
@@ -6,15 +6,23 @@ root{
     --color-dark-grey: #353535;
     --text-color: color-black;
 }
+
 body{
     color: var(--text-color);
 }
+
 a{
     color: var(--text-color);
 }
+
+.visually-hidden {
+    display: none;
+}
+
 .section-tagline{
     color: var(--color-primary);
 }
+
 .card-category{
     color: var(--color-primary);
 }
