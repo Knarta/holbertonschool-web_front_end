@@ -57,7 +57,6 @@ html {
     --header-logo-link-left: 0;
 }
 
-
 body {
     color: var(--text-color);
     font-family: var(--font-family-base);
@@ -105,6 +104,7 @@ a:active {
 .visually-hidden {
     display: none;
 }
+
 .section {
     padding: var(--section-padding);
 }
@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: var(--nav-item-margin);
 }
 
-.nav .nav-link{
+.nav .nav-link {
     display: block;
     padding: 0.5rem 1rem;
 }
@@ -279,7 +279,7 @@ ul.row {
     padding: var(--header-padding);
 }
 
-.hearder-logo {
+.header-logo {
     position: var(--header-logo-position);
 }
 
