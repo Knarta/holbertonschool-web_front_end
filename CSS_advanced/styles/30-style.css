@@ -10,8 +10,8 @@ html {
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
-    --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-base:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title:"Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
@@ -38,17 +38,17 @@ html {
     --nav-item-letter-spacing: 0.04rem;
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
-    --nav-item-link-hover: var(--color-primary);
+    --nav-item-link-hover: var(var(--color-primary));
     --section-tagline-margin: 0;
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: 0.2rem solid var(--color-primary);
-    --button-color: var(--color-black);
+    --button-color: color-black;
     --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
+    --button-font-size: font-size-large;
+    --button-hover-color: color-white;
     --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
+    --button-hover-background: color-primary;
     --header-padding: 4rem 0 0;
     --header-logo-position: relative;
     --header-logo-link-display: inline-block;
@@ -89,20 +89,20 @@ a:active {
 .button {
     display: var(--button-display);
     padding: var(--button-padding);
-    border: var(--button-border);
+    border-style: var(--button-border);
+    font-size: var(--button-font-size);
     color: var(--button-color);
     text-decoration: var(--button-text-decoration);
-    font-size: var(--button-font-size);
 }
 
 .button:hover {
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
-    background: var(--button-hover-background);
+    background-color: var(--button-hover-background);
 }
 
 .visually-hidden {
-    display: none;
+    display:none;
 }
 
 .card-category {
@@ -114,8 +114,7 @@ a:active {
 }
 
 .section-header {
-    padding: var(--section-header-padding);
-    text-align: var(--section-header-align);
+    padding: var(--section-header-padding)
 }
 
 .section-body {
@@ -131,26 +130,28 @@ a:active {
     padding: var(--footer-padding);
 }
 
-.section-title {
+.section-header {
+    text-align: var(--section-header-align);
+}
+
+.section-title{
     font-family: var(--font-family-title);
     font-size: var(--font-size-xx-large);
     font-weight: var(--font-weight-bold);
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
-}
 
+}
 .section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--font-weight-bold);
     margin: var(--section-tagline-margin);
+    color: var(--section-title-color);
 }
 
 .container {
     width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -176,7 +177,6 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: var(--nav-item-letter-spacing);
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
-    position: relative;
 }
 
 .nav .nav-link {
@@ -223,7 +223,7 @@ ul.footer {
     clear: both;
 }
 
-[data-section-theme="dark"] {
+[data-section-theme=“dark”] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
     background: var(--color-black);
@@ -310,8 +310,8 @@ ul.footer {
     width: 0;
     height: 0.2rem;
 }
-
-.nav .nav-item:hover .nav-link::before {
+  
+  .nav .nav-item:hover .nav-link::before {
     background-color: var(--color-primary);
     width: 100%;
 }
