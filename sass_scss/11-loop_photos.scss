@@ -1,8 +1,7 @@
 /* Loop Photos */
-
 @use "11-photos" as list;
 @each $photo-name in list.$list-names {
-    .photo-#{$photo-name} {
-        background: url("photos/#{$photo-name}.jpg") no-repeat;
+    .photo-#{$name} {
+        background: image-url("photos/#{$name}.jpg") no-repeat;
     }
 }
