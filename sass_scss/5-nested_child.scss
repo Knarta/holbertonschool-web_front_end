@@ -1,0 +1,12 @@
+/* Nested Child */
+
+$color-var: #3D3D3D;
+$color-child: #FF0000;
+
+body {
+    color: $color-var;
+
+    > .red {
+        color: $color-child;
+    }
+}
