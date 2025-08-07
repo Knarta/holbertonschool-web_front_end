@@ -1,0 +1,17 @@
+/* Nested Deeper */
+
+$font-size-var: 14px;
+$font-size-h1: 16px;
+$font-size-deeper: 12px;
+
+body {
+    font-size : $font-size-var;
+    
+    h1 {
+        font-size: $font-size-h1;
+
+        &.smaller{
+            font-size: $font-size-deeper;
+        }
+    }
+}
