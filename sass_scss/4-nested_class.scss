@@ -1,0 +1,12 @@
+/* Nested Class */
+
+$color-var: #3D3D3D;
+$color_class: #FF0000;
+
+body {
+    color: $color-var;
+
+    .red {
+        color: $color_class;
+    }
+}
