@@ -324,9 +324,6 @@
     color: var(--section-title-color);
   }
   
-  .section-services {
-    flex-wrap: wrap
-  }
   
   .section-tagline {
     color: var(--section-tagline-color);
@@ -376,6 +373,11 @@
   /* Section Latest news ============================= */
   .section-latest-news .row {
     flex-direction: row-reverse;
+  }
+  
+  /* Section SERVICES ============================= */
+  .section-services .row {
+    flex-wrap: wrap;
   }
   
   /*** 4. CARD ***/
