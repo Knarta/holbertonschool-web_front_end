@@ -255,7 +255,7 @@
   }
 
   .header-container {
-    align-items: center
+    align-items: center;
     display: flex;
     justify-content: space-between;
   }
