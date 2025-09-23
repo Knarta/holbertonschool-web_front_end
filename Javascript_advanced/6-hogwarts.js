@@ -42,6 +42,3 @@ draco.penalizeStudent();
 draco.penalizeStudent();
 draco.penalizeStudent();
 console.log(draco.getScore());
-
-
-
