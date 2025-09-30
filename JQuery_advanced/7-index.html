@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Wikipedia Search</title>
+        <script type="application/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            function createSearchForm() {
+                const textInput = $('<input type="text">');
+                const submitInput = $('<input type="submit" value="Submit">');
+                const ul = $('<ul></ul>');
+                
+                $('body').append(textInput);
+                $('body').append(submitInput);
+                $('body').append(ul);
+                
+                submitInput.on('click', function(event) {
+                    event.preventDefault();
+                    const searchTerm = textInput.val().trim();
+                    if (searchTerm) {
+                        ul.empty();
+                        queryWikipedia(searchTerm);
+                    }
+                });
+            }
+
+            function addNewArticle(id, title, snippet) {
+                const li = $('<li></li>');
+                const firstP = $('<p></p>');
+                const span = $('<span>' + id + ' - </span>');
+                const b = $('<b></b>').text(title);
+                firstP.append(span);
+                firstP.append(b);
+                const secondP = $('<p></p>').html(snippet);
+                li.append(firstP);
+                li.append(secondP);
+                $('ul').append(li);
+            }
+
+            function queryWikipedia(search) {
+                const apiUrl = 'https://en.wikipedia.org/w/api.php';
+                
+                const data = {
+                    action: 'query',
+                    format: 'json',
+                    list: 'search',
+                    srsearch: search,
+                    srlimit: 10,
+                    origin: '*'
+                };
+                $.ajax({
+                    url: apiUrl,
+                    data: data,
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.query && response.query.search) {
+                            const results = response.query.search;
+                            results.forEach(function(result) {
+                                addNewArticle(result.pageid.toString(), result.title, result.snippet);
+                            });
+                        }
+                    },
+                    error: function() {
+                        alert('Erreur lors de la récupération des données depuis Wikipedia.');
+                    }
+                });
+            }
+            $(document).ready(function() {
+                createSearchForm();
+            });
+        </script>
+    </body>
+</html>
