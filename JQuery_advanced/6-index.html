@@ -38,7 +38,7 @@
         }
 
         function createForm() {
-            $('body').prepend('<form><input type="text" name="firstName" placeholder="First Name"><input type="text" name="lastName" placeholder="Last Name"><select name="position"><option value="before">Before</option><option value="after">After</option></select><input type="submit" value="Add Member"></form>');
+            $('body').prepend('<form><input type="text" name="firstName" placeholder="First Name"><input type="text" name="lastName" placeholder="Last Name"><select name="position"><option value="before">Before</option><option value="after">After</option></select><input type="submit" value="Submit"></form>');
             
             $('form').submit(function(e) {
                 e.preventDefault();
@@ -53,11 +53,6 @@
 
         createFamilyTree();
         createForm();
-        addNewMember('Guillaume', 'Salva', 'after');
-        addNewMember('Arielle', 'Snizt', 'after');
-        addNewMember('Fanette', 'Snizt', 'after');
-        addNewMember('Gerard', 'Snizt', 'after');
-        addNewMember('Victor', 'Salva', 'after');
         </script>
     </body>
 </html>
